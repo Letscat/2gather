@@ -23,7 +23,7 @@ button.addEventListener('click', () => {
 //chat receive
 socket.on('receiveMsg', msg => {
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="background-color:grey;border-radius:5px;"><p>'+msg.text+" "+msg.name+"</p></div>")
+  chat.insertAdjacentHTML('beforeend', '<div style="background-color:white;border-radius:5px;border: 2px solid;"><p style="color:#288FC7">'+msg.name+"</p>"+msg.text+"</p></div>")
   
 })
 
