@@ -19,11 +19,20 @@ button.addEventListener('click', () => {
   const msg = {text:umessage.value, name:uname.value}
   socket.emit('userMessage', msg)
   document.getElementById('msg').value = "";
+
+  //display as your own msg
+  chat= document.getElementById('chat')
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:10px;border:2px solid;background-color:#d1ebbd;border-radius:10px;padding-left:10px;padding-top:5px;"><p style="font-weight:bold;margin-top:0;top:0;">You</p><p style="top:0;margin-top;0;">'+msg.text+'</p></div>')
+
 })
 //chat receive
 socket.on('receiveMsg', msg => {
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="background-color:white;border-radius:5px;border: 2px solid;"><p style="color:#288FC7">'+msg.name+"</p>"+msg.text+"</p></div>")
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:10px;border:2px solid;background-color:white;border-radius:10px;padding-left:10px;padding-top:5px;"><p style="color:#62a33c;font-weight:bold;margin-top:0;top:0;">  '
+  +msg.name+'</p><p style="top:0;margin-top;0;">'+msg.text+'</p></div>')
+
+ 
+chat.scrollTop = chat.scrollHeight;
   
 })
 
