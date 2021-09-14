@@ -46,7 +46,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: 00b35f;
+      background-color: #20cc7c;
+     
       border-radius: 10rem;
       z-index: -2;
     }
@@ -94,6 +95,45 @@
       background-color:#F9F9F9;
 
     }
+    input[type=text] {
+    display:inline-block;
+    width:20em;
+    padding-top:0px;
+    padding:10px;
+    border: 1px solid;
+    border-color:black;
+    font-size:0.75em;
+    margin-bottom:20px;
+    background-color:rgb(226, 226, 226);
+    border-radius:1em;
+}
+input[type=text]:focus {
+    border-radius: 1em;
+    background-color: #d1ebbd;
+    border-color:red;
+    border:3px solid;
+    outline:none;
+}
+
+textarea {
+    display:inline-block;
+    width:81%;
+    height:50px;
+    padding:10px;
+    border: 1px solid;
+    border-color:black;
+    margin-bottom:20px;
+    background-color:rgb(226, 226, 226);
+    border-radius:1em;
+}
+textarea:focus {
+    outline:none;
+    border-radius: 1em;
+    background-color: #d1ebbd;
+    border-color:red;
+    border:3px solid;
+}
+
   </style>
 </head>
 <body>
@@ -106,7 +146,7 @@
   </div>
   <div id="send">
     <input type="text" placeholder="Name" id="name" name="name" style="width:92%;"><p></p>
-    <textarea placeholder="Chat" id="msg" name="msg" style="width:92%;" >    </textarea> <p></p>
+    <textarea placeholder="Chat" id="msg" name="msg" style="width:92%;" ></textarea> <p></p>
     <button id="button" style="margin-right:6%;float:right;" > Send </button>
   </div>
   <div style="position:absolute;bottom:0;margin-right:40%;margin-left:40%">
