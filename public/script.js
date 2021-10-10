@@ -125,7 +125,27 @@ bcam.addEventListener('click', () => {
   
 });
 
+socket.on('usernr', usernr => {
+  if(usernr ==1  ){
+    videoGrid.style.gridAutoRows="45vw";
+    videoGrid.style.gridTemplateColumns="repeat(auto-fill, 79vw)";
+  }
+  if(usernr ==2  ){
+    videoGrid.style.gridAutoRows="45vw";
+    videoGrid.style.gridTemplateColumns="repeat(auto-fill, 39vw)";
+  }
+  if(usernr <= 4 && usernr > 2  ){
+    videoGrid.style.gridAutoRows="23vw";
+    videoGrid.style.gridTemplateColumns="repeat(auto-fill, 26.66vw)";
+  }
 
+  if(usernr > 4 ){
+    videoGrid.style.gridAutoRows="100px";
+    videoGrid.style.gridTemplateColumns="repeat(auto-fill, 100px)";
+    
+  }
+
+})
 
 
 
