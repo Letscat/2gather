@@ -22,14 +22,14 @@ button.addEventListener('click', () => {
 
   //display as your own msg
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="margin:10px;border:2px solid;background-color:#d1ebbd;border-radius:10px;padding-left:10px;padding-top:5px;"><p style="font-weight:bold;margin-top:0;top:0;">You</p><p style="top:0;margin-top;0;">'+msg.text+'</p></div>')
+  chat.insertAdjacentHTML('beforeend', '<div style="border-bottom:2px solid black;padding:5px;background-color:#2f4640;"><p style="font-weight:bold;margin-top:0;top:0;">You</p><p style="top:0;margin-top;0;">'+msg.text+'</p></div>')
 
 })
 //chat receive
 socket.on('receiveMsg', msg => {
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="margin:10px;border:2px solid;background-color:white;border-radius:10px;padding-left:10px;padding-top:5px;"><p style="color:#62a33c;font-weight:bold;margin-top:0;top:0;">  '
-  +msg.name+'</p><p style="top:0;margin-top;0;">'+msg.text+'</p></div>')
+  chat.insertAdjacentHTML('beforeend', '<div style="border:2px solid black;padding:5px;"><p style="color:#5ba894;font-weight:bold;margin-top:0;top:0;">  '
+  +msg.name+'</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
 
  
 chat.scrollTop = chat.scrollHeight;

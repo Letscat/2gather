@@ -12,12 +12,15 @@
   <script src="script.js" defer></script>
   <title>Document</title>
   <style>
+    body {
+      background-color: rgb(34, 34, 34);
+    }
     #video-grid {
       width:80%;
       float:left;
       display: grid;
-      grid-template-columns: repeat(auto-fill, 300px);
-      grid-auto-rows: 300px;
+      grid-template-columns: repeat(auto-fill, 50%);
+      grid-auto-rows: 50vh;
     }
     
     video {
@@ -76,15 +79,17 @@
       height:83%;
       position:fixed;
       float:right;
-      background-color:#F9F9F9;
+
       top:0;
       right:0;
       overflow-y: scroll;
     }
     #chatbackground{
       position:fixed;
-      width:23.5%;
-      height:max-content;
+      width:450px;
+      height:600px;
+      background-color: rgb(47, 47, 47);
+      background:g;
       right:0;
     }
     #send{
@@ -92,7 +97,9 @@
       right:5px;
       position:absolute;
       width:22.5%;
-      background-color:#F9F9F9;
+      padding-top:5%;
+      padding-left:0.7%;
+      background-color:rgb(47, 47, 47);
 
     }
     input[type=text] {
@@ -104,12 +111,13 @@
     border-color:black;
     font-size:0.75em;
     margin-bottom:20px;
-    background-color:rgb(226, 226, 226);
+    background-color:rgb(61, 61, 61);
     border-radius:1em;
+    color:white;
 }
 input[type=text]:focus {
     border-radius: 1em;
-    background-color: #d1ebbd;
+    background-color: rgb(34, 34, 34);
     border-color:red;
     border:3px solid;
     outline:none;
@@ -123,13 +131,14 @@ textarea {
     border: 1px solid;
     border-color:black;
     margin-bottom:20px;
-    background-color:rgb(226, 226, 226);
+    background-color:rgb(61, 61, 61);
     border-radius:1em;
+    color:white;
 }
 textarea:focus {
     outline:none;
     border-radius: 1em;
-    background-color: #d1ebbd;
+    background-color: rgb(34, 34, 34);
     border-color:red;
     border:3px solid;
 }
@@ -138,7 +147,7 @@ textarea:focus {
 </head>
 <body>
   <div id="video-grid"></div>
-  <!--<img id="chatbackground" src="2gather.png"> -->
+  <div id="chatbackground"></div>
   <div id="chat"> 
     
 
