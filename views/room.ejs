@@ -82,7 +82,7 @@
       background-color: rgb(47, 47, 47);;
       top:0;
       right:0;
-      /*overflow-y: scroll; */
+      overflow-y: scroll; 
     }
 
     #send{
@@ -135,6 +135,15 @@ textarea:focus {
     border-color:red;
     border:3px solid;
 }
+@media only screen and (max-width: 900px) {
+  #video-grid {
+    grid-template-columns: repeat(auto-fill, 100%)!important;
+      grid-auto-rows: 20vh!important;
+      width:50%
+  }
+  #send, #chat{
+    width:49%
+  }
 
   </style>
 </head>
