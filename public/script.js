@@ -1,3 +1,4 @@
+
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {})
@@ -44,7 +45,6 @@ navigator.mediaDevices.getUserMedia({
     screen sharings often require a high res.
     */
     width: { min: 240, ideal: 320, max: 400},
-    height: { min: 135, ideal: 180, max: 225},
     aspectRatio: { ideal: 1.7777777778 }
     
   },
