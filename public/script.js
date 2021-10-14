@@ -48,7 +48,14 @@ navigator.mediaDevices.getUserMedia({
     aspectRatio: { ideal: 1.7777777778 }
     
   },
-  audio: true
+  audio: {
+    volume: 0.5,
+    sampleSize: 32,
+    autoGainControl: true,
+    noiseSuppression: true,
+    echoCancellation: true
+  }
+
 }).then(stream => {
   addVideoStream(myVideo, stream)
  
