@@ -1,4 +1,3 @@
-
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {})
@@ -20,13 +19,13 @@ button.addEventListener('click', () => {
 
   //display as your own msg
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="border-bottom:2px solid black;padding:5px;background-color:#2f4640;"><p style="font-weight:bold;margin-top:0;top:0;">You</p><p style="top:0;margin-top;0;">'+msg.text+'</p></div>')
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border-radius:10px;padding:5px;background-color:#629757;"><p style="font-weight:bold;margin-top:0;top:0;color:white;">You</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
 
 })
 //chat receive
 socket.on('receiveMsg', msg => {
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="border:2px solid black;padding:5px;"><p style="color:#5ba894;font-weight:bold;margin-top:0;top:0;">  '
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border-radius:10px;padding:5px;background-color:#3E4A3D;"><p style="color:white;font-weight:bold;margin-top:0;top:0;">  '
   +msg.name+'</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
 
  
