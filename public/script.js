@@ -19,13 +19,21 @@ button.addEventListener('click', () => {
 
   //display as your own msg
   chat= document.getElementById('chat')
+<<<<<<< HEAD
   chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border-radius:10px;padding:5px;background-color:#35353a;"><p style="font-weight:bold;margin-top:0;top:0;color:#629757;">You</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
+=======
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border-radius:10px;padding:5px;background-color:#629757;"><p style="font-weight:bold;margin-top:0;top:0;color:white;">You</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
+>>>>>>> e827d0eea637890a3d26ae5a7cdb9311e2cf69a7
 
 })
 //chat receive
 socket.on('receiveMsg', msg => {
   chat= document.getElementById('chat')
+<<<<<<< HEAD
   chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border:2px solid #626266 ;border-radius:10px;padding:5px;background-color:rgb(32, 33, 38);"><p style="color:#a2ca96;font-weight:bold;margin-top:0;top:0;">  '
+=======
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border-radius:10px;padding:5px;background-color:#3E4A3D;"><p style="color:white;font-weight:bold;margin-top:0;top:0;">  '
+>>>>>>> e827d0eea637890a3d26ae5a7cdb9311e2cf69a7
   +msg.name+'</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
 
  
