@@ -19,13 +19,13 @@ button.addEventListener('click', () => {
 
   //display as your own msg
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="border-bottom:2px solid black;padding:5px;background-color:#2f4640;"><p style="font-weight:bold;margin-top:0;top:0;">You</p><p style="top:0;margin-top;0;">'+msg.text+'</p></div>')
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border-radius:10px;padding:5px;background-color:#35353a;"><p style="font-weight:bold;margin-top:0;top:0;color:#629757;">You</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
 
 })
 //chat receive
 socket.on('receiveMsg', msg => {
   chat= document.getElementById('chat')
-  chat.insertAdjacentHTML('beforeend', '<div style="border:2px solid black;padding:5px;"><p style="color:#5ba894;font-weight:bold;margin-top:0;top:0;">  '
+  chat.insertAdjacentHTML('beforeend', '<div style="margin:15px;border:2px solid #626266 ;border-radius:10px;padding:5px;background-color:rgb(32, 33, 38);"><p style="color:#a2ca96;font-weight:bold;margin-top:0;top:0;">  '
   +msg.name+'</p><p style="top:0;margin-top;0;color:white;">'+msg.text+'</p></div>')
 
  
@@ -44,11 +44,17 @@ navigator.mediaDevices.getUserMedia({
     screen sharings often require a high res.
     */
     width: { min: 240, ideal: 320, max: 400},
-    height: { min: 135, ideal: 180, max: 225},
     aspectRatio: { ideal: 1.7777777778 }
     
   },
-  audio: true
+  audio: {
+    volume: 0.5,
+    sampleSize: 32,
+    autoGainControl: true,
+    noiseSuppression: true,
+    echoCancellation: true
+  }
+
 }).then(stream => {
   addVideoStream(myVideo, stream)
  
